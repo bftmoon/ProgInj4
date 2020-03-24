@@ -16,7 +16,6 @@ public class Main {
             StringBuilder phone = new StringBuilder("+");
             Pattern.compile("\\d+").matcher(mas[2]).results().forEach(m -> phone.append(m.group()));
             if (phone.length() == 12)
-//                res.append(phone);
                 res.append(phone.insert(2, "(").insert(6, ")").insert(10, "-").insert(13, "-"));
             res.append("|");
             mas[3] = mas[3].replaceFirst("@+", "@").replaceFirst("\\.+", ".");
