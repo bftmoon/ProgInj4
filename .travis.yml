@@ -4,5 +4,6 @@ addons:
   sonarcloud:
     organization: "bigfatmoon" # the key of the org you chose at step #3
 script:
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.login=${SONAR_TOKEN} test jacoco:report coveralls:report
-#after_success: "mvn test"
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.login=${SONAR_TOKEN}
+after_success:
+  - mvn clean test jacoco:report coveralls:report
