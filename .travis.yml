@@ -2,8 +2,8 @@ language: java
 
 addons:
   sonarcloud:
-    organization: "bigfatmoon" # the key of the org you chose at step #3
+    organization: "bigfatmoon"
 script:
-  - mvn clean jacoco:prepare-agent package sonar:sonar -Dsonar.login=${SONAR_TOKEN}
+  - mvn clean jacoco:prepare-agent package sonar:sonar -Dsonar.login=${SONAR_TOKEN} -DcovToken=${COVERALLS_TOKEN}
 after_success:
   - mvn clean test jacoco:report coveralls:report
