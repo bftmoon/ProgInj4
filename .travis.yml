@@ -5,3 +5,5 @@ addons:
     organization: "bigfatmoon" # the key of the org you chose at step #3
 script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar -Dsonar.login=${SONAR_TOKEN}
+  - sbt clean coverage test
+after_success: "sbt coverageReport coveralls"
