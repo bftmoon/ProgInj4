@@ -1,4 +1,4 @@
-Иван Иванов|27|+79990001111|example@yandex.ru
-Петр Петров|30|+79992301111|example@mail.ru
-Петр Смирнов||+79992301111|example@mail.ru
-||+79992301111|example@mail.ru
+Иван Иванов|27|+7(999)000-11-11|example@yandex.ru
+Петр Петров|30|+7(999)230-11-11|example@mail.ru
+Петр Смирнов||+7(999)230-11-11|example@mail.ru
+||+7(999)230-11-11|example@mail.ru
